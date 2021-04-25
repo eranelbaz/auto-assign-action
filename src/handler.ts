@@ -53,8 +53,11 @@ export async function handlePullRequest(
     )
     return
   }
+  console.log('helo')
   if (!runOnDraft && draft) {
-    core.info(`Skips the`)
+    core.info(
+      `Skips the process to add reviewers/assignees since PR type is draft`
+    )
     return
   }
 
