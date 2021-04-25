@@ -46,7 +46,7 @@ export async function handlePullRequest(
   } = config
 
   core.info(JSON.stringify(config))
-
+  return
   if (skipKeywords && utils.includesSkipKeywords(title, skipKeywords)) {
     core.info(
       'Skips the process to add reviewers/assignees since PR title includes skip-keywords'
