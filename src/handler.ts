@@ -53,10 +53,11 @@ export async function handlePullRequest(
     )
     return
   }
-  console.log('helo')
+  core.setFailed(`Action failed with error ${runOnDraft}`)
+
   if (!runOnDraft && draft) {
     core.info(
-      `Skips the process to add reviewers/assignees since PR type is draft`
+      'Skips the process to add reviewers/assignees since PR type is draft'
     )
     return
   }
