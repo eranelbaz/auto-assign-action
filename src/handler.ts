@@ -53,7 +53,6 @@ export async function handlePullRequest(
     )
     return
   }
-  core.setFailed(`Action failed with error ${runOnDraft}`)
 
   if (!runOnDraft && draft) {
     core.info(
