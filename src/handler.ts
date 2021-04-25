@@ -51,6 +51,8 @@ export async function handlePullRequest(
     )
     return
   }
+  core.info(`runOnDraft - ${runOnDraft}`)
+  core.info(`draft - ${draft}`)
   if (!runOnDraft && draft) {
     core.info(
       'Skips the process to add reviewers/assignees since PR type is draft'
